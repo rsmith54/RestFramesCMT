@@ -1,0 +1,21 @@
+package RestFrames
+
+public
+use AtlasPolicy         AtlasPolicy-*
+use AtlasROOT           AtlasROOT-*         External
+
+apply_tag ROOTBasicLibs
+apply_tag ROOTMathLibs
+apply_tag ROOTGraphicsLibs
+apply_tag ROOTTableLibs
+apply_tag ROOTRooFitLibs
+apply_pattern RootDictionary
+
+#apply_pattern dual_use_library files="../src/*.cc"
+library RestFrames *.cc
+
+apply_pattern installed_library
+
+apply_pattern declare_joboptions files="*.py"
+apply_pattern declare_python_modules files="*.py"
+apply_pattern declare_calib files="../data"

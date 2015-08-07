@@ -17,17 +17,17 @@
 //   it under the terms of the GNU General Public License as published by
 //   the Free Software Foundation; either version 2 of the License, or
 //   (at your option) any later version.
-// 
+//
 //   RestFrames is distributed in the hope that it will be useful,
 //   but WITHOUT ANY WARRANTY; without even the implied warranty of
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //   GNU General Public License for more details.
-// 
+//
 //   You should have received a copy of the GNU General Public License
 //   along with RestFrames. If not, see <http://www.gnu.org/licenses/>.
 /////////////////////////////////////////////////////////////////////////
 
-#include "RestFrames/RestFrames_config.h"
+//#include "RestFrames/RestFrames_config.h"
 #include "RestFrames/RFBase.hh"
 
 using namespace std;
@@ -85,7 +85,7 @@ namespace RestFrames {
   bool RFBase::IsSame(const RFKey& key) const {
     return (m_Key == key);
   }
-     
+
   bool RFBase::IsSame(const RFBase& obj) const {
     return obj == m_Key;
   }
@@ -171,9 +171,6 @@ namespace RestFrames {
   __attribute__((constructor))
   static void initializer(void){
     printf("\n" "\x1b[36m");
-    printf(PACKAGE_NAME);
-    printf(" v");
-    printf(PACKAGE_VERSION);
     printf(" -- Developed by Christopher Rogan (crogan@cern.ch)\n");
     printf("                     ");
     printf("Copyright (c) 2014-2015, Christopher Rogan\n");
